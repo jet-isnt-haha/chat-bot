@@ -1,0 +1,125 @@
+
+.sidebar-container{
+    position: absolute;
+    width: 360px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    user-select: none;/* 防止用户选中用户中的文本 */
+    background: rgb(241, 241, 244);
+    border-radius: 15px;
+    transform-origin: left;
+    pointer-events: auto;
+    transform:scale(1);
+    box-shadow: 0 0 128px 0 rgba(0,0 , 0, 0.1),
+    0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition:all 0.7s ease;
+  }
+.sidebar-container.collapse{
+    position: absolute;
+    pointer-events: none;
+    transform:translateX(-500px);
+    transition:all 0.7s ease;
+}
+.side-header{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.side-header svg{
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    flex-shrink:0;
+    fill: #6D4FC2;
+    background: #fff;
+    border-radius: 50%;
+  }
+  
+.side-header .logo-text{
+    color:#971919;
+    font-size: 1.31rem;
+    font-weight: 600;
+  }
+  
+
+.side-header button{
+    position: absolute;
+    right: 0;
+    padding-right: 50px;
+    height: 40px;
+    width: 40px;
+    background: none;
+    border: none;
+    outline: none;
+    color:#6d6969;
+    font-size: 1.9rem;
+    cursor: pointer;
+    padding-top: 2px;
+    border-radius: 50%;
+    margin-right:-10px;
+}
+
+.side-header button:hover{
+    color: black;
+  }
+
+  .side-body{
+
+}
+
+.side-body Button{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid #bdd5e2;
+    border-radius: 4px;
+    background: linear-gradient(#e6f3f9, #c6e1ee);
+    color: #007bff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    padding: 20px;
+    }
+    .side-body Button:hover{
+        background: linear-gradient(#d9ecf5, #b6dce8);
+        border-color: #9dc8d5;
+    }
+
+.recent-message{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+}
+.ant-collapse-content-box{
+    background: rgb(241, 241, 244);
+}
+.dialog-items Button{
+    outline: none;
+    background: rgb(241, 241, 244);
+    color: rgb(134, 132, 132);
+    font-size: 17px;
+    border: none;
+    transition: 0.1 ease;
+}
+
+.dialog-items Button:hover{
+    background: rgb(209, 209, 211)!important;
+}
+
+.dialog-items Button:focus{
+    font-size: 21px;
+    background: #fff!important;
+    color: black!important;
+}
+.side-footer{
+ 
+    height: 100%;
+}
