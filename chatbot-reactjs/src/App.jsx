@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { checkTokenAPI } from './apis/user';
 import { message } from 'antd';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import ChatLogout from './components/ChatLogout';
 import ChatHeader from './components/ChatHeader';
 import ChatBody from './components/ChatBody';
@@ -14,8 +14,10 @@ import ChatbotSideBar from './components/ChatbotSideBar';
 export default function App() {
 
  const showChatbot=useSelector(state=>state.btn.showChatbot)
+const navigate =useNavigate()
   //渲染页面时（重新加载页面）时验证token
   useEffect(()=>{
+
     async function checkToken(){
     try {
       const res= await checkTokenAPI()
@@ -30,7 +32,7 @@ export default function App() {
     }
   }
   checkToken()
-
+  navigate('/')
   },[])
 
 

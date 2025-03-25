@@ -17,6 +17,7 @@ const http =axios.create({
 //添加请求拦截器
 http.interceptors.request.use((config)=>{
     const token =getToken()
+
     if(token){
         config.headers.Authorization=`Bearer ${token}`
     }
@@ -27,7 +28,7 @@ http.interceptors.request.use((config)=>{
 
 //添加响应拦截器
 http.interceptors.response.use((response)=>{
-    // console.log(response.data)
+
     switch(response.data.code){
         //token出错删除token，跳回登录页面
         case '2003':{

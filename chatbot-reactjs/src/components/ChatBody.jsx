@@ -20,7 +20,7 @@ const ChatBody = () => {
       top: chatBodyRef.current.scrollHeight,
       behavior: 'smooth',
     })
-
+    
   }, [chatMessages])
 
   return (

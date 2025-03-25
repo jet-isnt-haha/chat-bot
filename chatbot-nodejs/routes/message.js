@@ -134,4 +134,24 @@ router.get('/message/:id',checkTokenMiddleware,async(req,res)=>{
     }
 })
 
+//从数据库中删除用户选定的对应对话
+router.delete('/message/:id',checkTokenMiddleware,async(req,res)=>{
+    try {
+        const _id =req.params.id
+        const data=await MessageModel.deleteOne({_id})
+        console.log(data)
+        res.json({
+            code:'0000',
+            msg:'删除对话成功',
+            data
+        })
+    } catch (error) {
+        console.log(error)
+    return res.json({
+        code:'5004',
+        msg:'删除单条对话失败',
+        data:null
+    })        
+    }
+})
 module.exports =router

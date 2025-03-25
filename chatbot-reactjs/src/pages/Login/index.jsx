@@ -12,7 +12,9 @@ const Login = () => {
         if(isLogin){
         message.success(msg)
         setTimeout(() => {
-            navigate('/')
+            navigate('/').then(()=>
+                window.location.reload()//更新token
+        )
         }, 500);
         }else{
             message.error(msg)
@@ -24,6 +26,7 @@ const Login = () => {
     }
 
     return (
+
         <div className="container">
             <div className="login-popup  w-[375px] h-[420px] rounded-[15px] shadow-[0_0_128px_0_rgba(0,0,0,0.1),0_32px_64px_-48px_rgba(0,0,0,0.5)]  flex items-center justify-center bg-gradient-to-b from-[#F4F0FF] to-[#DACDEF]">
                 <div className="w-full max-w-md p-8 bg-white shadow-lg rounded-lg">
@@ -92,8 +95,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
-
+        </div>  
     )
 }
 

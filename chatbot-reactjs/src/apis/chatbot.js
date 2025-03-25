@@ -1,13 +1,29 @@
 import { http } from "../utils";
-
-//模型回复API
-export function generateAPI(history,signal){
-    return http({
-        url:'/generate',
-        method:'POST',
-        data:{
-            history
+import { getToken } from "../utils";
+const token =getToken()
+// export function generateAPI(history,signal){
+//     return http({
+//         url:'/generate',
+//         method:'POST',
+//         data:{
+//             history
+//         },
+//         signal,
+//         responseType: 'text', // 不能用 'stream'，改为 'text' 处理
+//         onDownloadProgress: (progressEvent) => {
+//             const xhr = progressEvent.target;
+//             const responseText = xhr.responseText;
+//             console.log('流式数据:', responseText);
+//         }
+//     })
+// }
+export function generateAPI(history, signal) {
+    return fetch('http://127.0.0.1:3000/api/generate', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' ,
+           Authorization:`Bearer ${token}`
         },
+        body: JSON.stringify({ history }),
         signal
     })
 }
@@ -42,5 +58,13 @@ export function newMessageAPI(){
     return http({
         url:'/message',
         method:'GET'
+    })
+}
+
+//删除对话API
+export function delMessageAPI(msgId){
+    return http({
+        url:`/message/${msgId}`,
+        method:'DELETE'
     })
 }

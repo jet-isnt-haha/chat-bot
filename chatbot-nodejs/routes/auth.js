@@ -47,6 +47,7 @@ router.post('/login',async (req,res)=>{
             //逾期时间设为一周
             expiresIn:60*60*24*7
         })
+        console.log(token)
         res.json({
             code:'0000',
             msg:'登录成功',

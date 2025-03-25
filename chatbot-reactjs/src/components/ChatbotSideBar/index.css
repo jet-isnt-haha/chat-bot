@@ -70,55 +70,7 @@
 
 }
 
-.side-body Button{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    padding: 6px 12px;
-    border: 1px solid #bdd5e2;
-    border-radius: 4px;
-    background: linear-gradient(#e6f3f9, #c6e1ee);
-    color: #007bff;
-    font-size: 20px;
-    font-weight: 500;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    width: 100%;
-    padding: 20px;
-    }
-    .side-body Button:hover{
-        background: linear-gradient(#d9ecf5, #b6dce8);
-        border-color: #9dc8d5;
-    }
 
-.recent-message{
-    width: 100%;
-    height: 100%;
-    font-size: 20px;
-    border: none;
-}
-.ant-collapse-content-box{
-    background: rgb(241, 241, 244);
-}
-.dialog-items Button{
-    outline: none;
-    background: rgb(241, 241, 244);
-    color: rgb(134, 132, 132);
-    font-size: 17px;
-    border: none;
-    transition: 0.1 ease;
-}
-
-.dialog-items Button:hover{
-    background: rgb(209, 209, 211)!important;
-}
-
-.dialog-items Button:focus{
-    font-size: 21px;
-    background: #fff!important;
-    color: black!important;
-}
 .side-footer{
  
     height: 100%;

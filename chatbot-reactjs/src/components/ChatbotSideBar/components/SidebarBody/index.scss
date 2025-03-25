@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.side-body Button{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid #bdd5e2;
+    border-radius: 4px 0px 0px 4px;;
+    background: linear-gradient(#e6f3f9, #c6e1ee);
+    color: #007bff;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    padding: 20px;
+    }
+    .side-body Button:hover{
+        background: linear-gradient(#d9ecf5, #b6dce8);
+        border-color: #9dc8d5;
+    }
+
+.recent-message{
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border: none;
+}
+.ant-collapse-content-box{
+    background: rgb(241, 241, 244);
+}
+.dialog-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .more_horiz{
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        height: 39.98px;
+        padding-inline:  15px;
+        border-radius: 0px 4px 4px 0px;
+        opacity: 0;
+        transition:all 0.2s ease;
+       
+    }
+    Button,.more_horiz{
+    outline: none;
+    background: rgb(241, 241, 244);
+    color: rgb(134, 132, 132);
+    font-size: 17px;
+    border: none;
+    }
+}
+
+.dialog-item:hover{
+    .more_horiz {
+        pointer-events: auto;
+        cursor: pointer;
+        opacity: 1;
+        background: rgb(255, 255, 255)!important;
+      }
+}
+
+
+
+.dialog-item :focus{
+    font-size: 21px;
+    background: #fff!important;
+    color: black!important;
+}
+
+.delete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .material-symbols-outlined,Button{
+        border: none;
+        color: red;
+
+    }
+    .material-symbols-outlined{
+        
+        pointer-events: none;
+        padding-top: 5px;
+        font-size: 20px;
+    }
+
+    Button{
+        span{
+            margin-left: -10px;
+            padding-right: 20px;
+            font-size: 20px;
+        }
+        span,button:hover{
+            color: red!important;
+        }
+ 
+    }
+}
