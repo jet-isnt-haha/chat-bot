@@ -115,7 +115,4 @@ npm run dev
 ## 许可证
 本项目采用 [MIT 许可证](LICENSE)。
 
-## 联系方式
-如果你有任何问题或建议，请通过以下方式联系我们：
-- 邮箱：your_email@example.com
-- GitHub Issues：[https://github.com/jet-isnt-haha/chat-bot/issues](https://github.com/jet-isnt-haha/chat-bot/issues)
+
